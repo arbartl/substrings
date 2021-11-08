@@ -3,7 +3,7 @@ def substrings(string, dictionary)
 
     dictionary.each do |word|
         for i in 0..(string.length-word.length)
-            if string[i...i+word.length] == word
+            if string[i...i+word.length].downcase == word
                 matches[word] += 1
             end
         end
